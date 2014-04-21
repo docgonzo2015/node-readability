@@ -176,6 +176,8 @@ function read(html, options, callback) {
       }
 
       jsdomParse(null, res, buffer.toString());
+      
+      res.resume();
     });
   } else {
     jsdomParse(null, null, html);
